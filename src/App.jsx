@@ -4,6 +4,8 @@
 // import './App.css'
 import { Route, Routes } from "react-router-dom"
 import SignIn from "./pages/Signin"
+import Home from "./pages/Home"
+import About from "./pages/About"
 
 function App() {
  
@@ -12,7 +14,8 @@ function App() {
     <>
       <Routes>
         <Route path="/signin" element={<SignIn/>}/>
-        
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
       </Routes>
     </>
   )
