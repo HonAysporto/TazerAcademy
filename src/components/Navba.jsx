@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import {
   Navbar,
   MobileNav,
@@ -17,7 +18,7 @@ import {
 
  
 const Navba = () => {
-  const [openNav, setOpenNav] = React.useState(false);
+  const [openNav, setOpenNav] = useState(false);
  
   React.useEffect(() => {
     window.addEventListener(
@@ -34,7 +35,7 @@ const Navba = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <NavLink to="/"  className={` flex items-center text-sm font-bold border-b  lg:hover:border-b-2 lg:hover:border-purple-500 ${location.pathname === '/' ? 'text-purple-600' : 'text-black'}`}>
+        <NavLink to="/"  className={` flex items-center text-sm font-bold border-border-white   lg:hover:border-b-2 lg:hover:border-purple-500 ${location.pathname === '/' ? 'text-purple-600' : 'text-black'}`}>
        Home
         </NavLink>
       </Typography>
@@ -44,7 +45,7 @@ const Navba = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link to="/about" className={` flex items-center text-sm font-bold border-b  lg:hover:border-b-2 lg:hover:border-purple-500 ${location.pathname === '/about' ? 'text-purple-600' : 'text-black'}`}>
+        <Link to="/about" className={` flex items-center text-sm font-bold border-b border-white lg:hover:border-b-2 lg:hover:border-purple-500 ${location.pathname === '/about' ? 'text-purple-600' : 'text-black'}`}>
         About
         </Link>
       </Typography>
