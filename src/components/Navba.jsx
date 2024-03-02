@@ -60,7 +60,7 @@ const Navba = () => {
           <Typography
             as="a"
             href="#"
-            className="mr-4 cursor-pointer py-1.5 font-medium font-serif text-3xl font-extrabold text-purple-600"
+            className="mr-4 cursor-pointer py-1.5  font-serif text-3xl font-extrabold text-purple-600"
           >
             TAZERH 
           </Typography>
@@ -77,7 +77,7 @@ const Navba = () => {
     >
       <MenuHandler>
         <div className="flex items-center justify-center">
-        <button   className="hidden lg:inline-block hover:bg-white  font-bold  "> E-Portal </button>
+        <button   className="hidden lg:inline-block hover:bg-white  font-bold  "> e-Portal </button>
         <svg className="h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
       </svg>
@@ -85,8 +85,8 @@ const Navba = () => {
      
       </MenuHandler>
       <MenuList>
-        <MenuItem>Admin</MenuItem>
-        <MenuItem>Student</MenuItem>
+        <MenuItem><Link to="/adminlogin"> Admin</Link></MenuItem>
+        <MenuItem><Link to="/studentlogin"> Student</Link></MenuItem>
       
       </MenuList>
     </Menu>

@@ -6,7 +6,10 @@ import { Route, Routes } from "react-router-dom"
 import SignIn from "./pages/Signin"
 import Home from "./pages/Home"
 import About from "./pages/About"
-import Signupp from "./pages/Signupp"
+import StudentSignup from "./pages/StudentSignup"
+import AdminLogin from "./pages/AdminLogin"
+import StudentLogin from "./pages/StudentLogin"
+
 
 
 function App() {
@@ -18,7 +21,9 @@ function App() {
         <Route path="/signin" element={<SignIn/>}/>
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
-        <Route path="/signup" element={<Signupp/>}/>
+        <Route path="/studentsignup" element={<StudentSignup/>}/>
+        <Route path="/adminlogin" element={<AdminLogin/>}/>
+      <Route path="/studentlogin" element={<StudentLogin/>}/>
       </Routes>
     </>
   )

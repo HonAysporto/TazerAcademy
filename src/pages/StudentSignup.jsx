@@ -10,23 +10,32 @@ import * as Yup from 'yup'
 
 
 
+let url = "http://localhost:5000/student/signup"
 
-const Signup = () => {
-//   const [login, setlogin] = useState("")
-//    let  navigate = useNavigate()
-//     const [email, setemail] = useState("")
-//     const [password, setpassword] = useState("")
-//     let url = "http://localhost:5000/user/signin"
-//     const signin = () => {
-//         axios.post(url, {email, password}).then((response)=> {
-//           if(!response.data.status) {
-//               console.log(response.data.message);
-//               setlogin(response.data.message)
-//           } else {
-//             navigate('/dashboard')
-//           }
-//         })
-//     } 
+
+
+
+const StudentSignup = () => {
+
+  const navigate = useNavigate()
+  // const [login, setlogin] = useState("")
+  //  let  navigate = useNavigate()
+  //   const [email, setemail] = useState("")
+  //   const [password, setpassword] = useState("")
+  //   let url = "http://localhost:5000/user/signin"
+  //   const signin = () => {
+  //       axios.post(url, {email, password}).then((response)=> {
+  //         if(!response.data.status) {
+  //             console.log(response.data.message);
+  //             setlogin(response.data.message)
+  //         } else {
+  //           navigate('/dashboard')
+  //         }
+  //       })
+  //   } 
+
+
+
 
 let formik = useFormik({
   initialValues : {
@@ -37,6 +46,18 @@ let formik = useFormik({
   },
   onSubmit : (values)=> {
     console.log(values);
+    axios.post(url, values).then((response)=> {
+      if(!response.data.status) {
+        console.log(response.data.message);
+      
+
+      } else {
+        console.log(response.data.message)
+        alert(response.data.message)
+        navigate('/studentlogin')
+
+      }
+    })
   },
 
   validationSchema: Yup.object({
@@ -167,7 +188,12 @@ console.log(formik.errors);
             </div>
           </form>
 
-
+          <p className="mt-10 text-center text-sm text-gray-500">
+          Already signed up?{' '}
+          <Link to="/studentlogin" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+            Click here to login
+          </Link>
+        </p>
         </div>
       </div>
 
@@ -175,4 +201,4 @@ console.log(formik.errors);
   )
 }
 
-export default Signup
+export default StudentSignup
