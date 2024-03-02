@@ -73,11 +73,11 @@ console.log(formik.errors);
   return (
    <>
 
-    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 ">
+    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8  bg-purple-100">
       <div>
         
       </div>
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm shadow-lg p-6 pt-3  pb-3 bg-white rounded-t-md">
+        <div className="sm:mx-auto sm:w-full sm:max-w-sm shadow-lg p-6 pt-3  pb-3  bg-purple-100rounded-t-md">
           <img
             className="mx-auto h-10 w-auto"
             src={spark}
@@ -88,7 +88,7 @@ console.log(formik.errors);
           </h2>
         </div>
         
-        <div className=" sm:mx-auto sm:w-full sm:max-w-sm shadow-lg p-6 mb-6 mt-0 bg-white rounded-b-md">
+        <div className=" sm:mx-auto sm:w-full sm:max-w-sm shadow-lg p-6 mb-6 mt-0 bg-purple-100 rounded-b-md">
           <form className="space-y-6 " action="#" method="POST" onSubmit={formik.handleSubmit}>
             <div>
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">

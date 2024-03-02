@@ -9,6 +9,7 @@ import About from "./pages/About"
 import StudentSignup from "./pages/StudentSignup"
 import AdminLogin from "./pages/AdminLogin"
 import StudentLogin from "./pages/StudentLogin"
+import Dashboard from "./pages/Dashboard"
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/studentsignup" element={<StudentSignup/>}/>
         <Route path="/adminlogin" element={<AdminLogin/>}/>
       <Route path="/studentlogin" element={<StudentLogin/>}/>
+      <Route path="/dashboard" element={<Dashboard/>}/>
       </Routes>
     </>
   )

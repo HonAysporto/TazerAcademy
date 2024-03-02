@@ -3,9 +3,17 @@ import { Formik, useFormik  } from 'formik'
 import spark from "../assets/spark.png"
 import * as Yup from 'yup'
 import { Link } from "react-router-dom";
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
+
+
+let url = "http://localhost:5000/student/signin"
 
 const StudentLogin = () => {
+
+  const navigate = useNavigate();
+
    let formik = useFormik({
     initialValues : {
       email: "",
@@ -13,6 +21,16 @@ const StudentLogin = () => {
     },
     onSubmit : (values)=> {
       console.log(values);
+      axios.post(url, values).then((response)=> {
+        if(!response.data.status) {
+          console.log(response.data.message);
+          alert(response.data.message)
+        } else {
+          console.log(response.data.message)
+          alert(response.data.message)
+          navigate('/dashboard')
+        }
+      })
     }, 
 
     validationSchema: Yup.object({
@@ -36,7 +54,7 @@ const StudentLogin = () => {
           alt="Your Company"
         />
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-          Sign in to your account
+          Student Account
         </h2>
       </div>
 
