@@ -24,10 +24,10 @@ const StudentLogin = () => {
       axios.post(url, values).then((response)=> {
         if(!response.data.status) {
           console.log(response.data.message);
-          alert(response.data.message)
+          // alert(response.data.message)
         } else {
           console.log(response.data.message)
-          alert(response.data.message)
+          // alert(response.data.message)
           localStorage.token = response.data.token
           navigate('/dashboard')
         }
@@ -75,7 +75,7 @@ const StudentLogin = () => {
                 onChange={formik.handleChange}
                 value={formik.values.email}
                 onBlur={formik.handleBlur}
-                className={formik.touched.email && formik.errors.email  ? "border-red-500 text-red-500 focus:outline-none focus:ring focus:border-red-500 block w-full rounded-md border-2 py-1.5" : "block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"}
+                className={formik.touched.email && formik.errors.email  ? "border-red-500 text-red-500 focus:outline-none focus:ring focus:border-red-500 block w-full rounded-md border-2 py-1.5 p-5" : "block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6 p-5"}
                 />
                 <small className='text-red-500'>{formik.touched.email && formik.errors.email}</small>
             </div>
@@ -102,7 +102,7 @@ const StudentLogin = () => {
                 onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.password}
-                  className={formik.touched.password && formik.errors.password   ? "border-red-500 text-red-500 focus:outline-none focus:ring focus:border-red-500 block w-full rounded-md border-2 py-1.5" : "block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"}
+                  className={formik.touched.password && formik.errors.password   ? "border-red-500 text-red-500 focus:outline-none focus:ring focus:border-red-500 block w-full rounded-md border-2 py-1.5 p-5" : "block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6 p-5"}
                   />
                   <small className='text-red-500'>{formik.touched.password && formik.errors.password}</small>
             </div>
