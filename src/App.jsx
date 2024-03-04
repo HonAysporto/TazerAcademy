@@ -10,11 +10,12 @@ import StudentSignup from "./pages/StudentSignup"
 import AdminLogin from "./pages/AdminLogin"
 import StudentLogin from "./pages/StudentLogin"
 import Dashboard from "./pages/Dashboard"
-
+import Forget from "./pages/Forget"
 
 
 function App() {
  
+
 
   return (
     <>
@@ -26,6 +27,7 @@ function App() {
         <Route path="/adminlogin" element={<AdminLogin/>}/>
       <Route path="/studentlogin" element={<StudentLogin/>}/>
       <Route path="/dashboard" element={<Dashboard/>}/>
+      <Route path="/forgotpassword" element={<Forget/>}/>
       </Routes>
     </>
   )
